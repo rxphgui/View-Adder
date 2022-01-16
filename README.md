@@ -10,4 +10,6 @@ git clone https://github.com/Rxphgui/View-Adder
 cd View-Adder/
 ruby View Adder.rb
 ```
-# To use
+# To use ♟ 
+
+*it's simple, see image 1 2 3 4*
