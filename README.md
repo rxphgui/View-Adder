@@ -11,5 +11,6 @@ cd View-Adder/
 ruby View Adder.rb
 ```
 # To use ♟ 
-
-*it's simple, see image 1 2 3 4*
+![](./2.png)
+![](./4.png)
+it's simple, see image 1 2 3 4
