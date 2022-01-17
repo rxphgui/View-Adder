@@ -11,18 +11,16 @@ def name = <<-'EOF'
    EOF
 puts "#{name}".blue
 
-puts("\nVeuillez choisir votre Option (100 ou 1000) :")
-scar = "\n[+] ".red
-print(scar)
+print("\nVeuillez choisir le nombre de vues que vous voulez: ")
 ok = gets.chomp.to_i
 system("cls")
 puts "#{name}".blue
-puts "\nMetter votre compte Github :\n"
-scar = "\n[+] ".red
+print "\nMetter votre compte Github :\n"
 print(scar)
 raph = gets.chomp
            
-(1..ok).each do 
+(1..ok).each do |i| 
+      puts "#{i} views added\r"
       req = open("https://camo.githubusercontent.com/#{raph}").read
 end
 puts "#{name}".blue
