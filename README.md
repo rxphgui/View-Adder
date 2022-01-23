@@ -14,3 +14,5 @@ ruby View Adder.rb
 ![](./2.png)
 ![](./4.png)
 it's simple, see image 1 2 3 4
+
+[![GitHub tag (latest SemVer)](https://img.shields.io/github/RxphGui/View-Adder
