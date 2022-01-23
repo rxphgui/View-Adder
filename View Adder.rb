@@ -11,28 +11,61 @@ def clear()
     end
 end
 
-def name = <<-'EOF'
-           _                   _       _     _           
-    /\   /(_) _____      __   /_\   __| | __| | ___ _ __ 
-    \ \ / / |/ _ \ \ /\ / /  //_\\ / _` |/ _` |/ _ \ '__|
-     \ V /| |  __/\ V  V /  /  _  \ (_| | (_| |  __/ |   
-      \_/ |_|\___| \_/\_/   \_/ \_/\__,_|\__,_|\___|_|   
-                                                         
-   EOF
-puts "#{name}".blue
+class Signature
 
-print("\nVeuillez choisir le nombre de vues que vous voulez: ")
-ok = gets.chomp.to_i
-clear()
 
-puts "#{name}".blue
-print "\nMetter votre compte Github :\n"
-raph = gets.chomp
-           
-(1..ok).each do |i| 
-      req = Net::HTTP.get(URI("https://camo.githubusercontent.com/#{raph}"))
-      print "#{i} views added\r"
+    def asciitexto()
+        ascitext = Net::HTTP.get(URI("http://artii.herokuapp.com/make?text=ViewAdder"))
+        puts"#{ascitext}".blue
+    end
+
+    def created()
+        puts"              **Create by Rxphgui**".green
+        puts"              **Developped on Ruby**".red
+    end
+
+    def touttext
+        asciitexto()
+        created()
+    end
 
 end
-puts "#{name}".blue
-puts"\nVous avez eu +#{ok} views !"
+
+class Choix
+
+
+    def starting()
+        print("\nVeuillez choisir le nombre de vues que vous voulez: ")
+        scar = "\n[+] ".red
+        print(scar)
+        ok = gets.chomp.to_i
+        clear()
+    end
+
+    def account()
+        puts Sign.asciitexto
+        print("\nVeuillez rentrer votre compte github : ")
+        scar = "\n[+] ".red
+        print(scar)
+        compte = gets.chomp
+        clear()
+    end
+    
+    def lancement(ok)
+        puts Sign.asciitexto
+        (1..ok).each do |i|  
+            req = Net::HTTP.get(URI("https://camo.githubusercontent.com/#{compte}"))
+            print "#{i} views added\r"
+        end
+    end
+
+end   
+
+Sign = Signature.new()
+Cchoix = Choix.new()
+
+puts Sign.touttext
+Cchoix.starting()
+Cchoix.account()
+Cchoix.lancement(ok)
+print ok
