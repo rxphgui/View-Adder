@@ -1,3 +1,4 @@
+[![GitHub All Releases](https://img.shields.io/badge/-Download-blue)](https://github.com/RxphGui/View-Adder)
 # View Adder 👨‍💻 
 
 *I created View-Adder to increase Github account view. When i do my profil and i add the view counter.
@@ -14,5 +15,4 @@ ruby View Adder.rb
 ![](./2.png)
 ![](./4.png)
 it's simple, see image 1 2 3 4
-
-[![GitHub tag (latest SemVer)](https://img.shields.io/github/RxphGui/View-Adder)
+[![GitHub All Releases](https://img.shields.io/github/downloads/horsicq/XOpcodeCalc/total.svg)](https://github.com/RxphGui/View-Adder)
