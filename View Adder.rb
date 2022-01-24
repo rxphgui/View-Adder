@@ -33,12 +33,13 @@ end
 
 class Choix
 
-
+    attr_accessor :ok, :compte
+    
     def starting()
         print("\nVeuillez choisir le nombre de vues que vous voulez: ")
         scar = "\n[+] ".red
         print(scar)
-        ok = gets.chomp.to_i
+        self.ok = gets.chomp.to_i
         clear()
     end
 
@@ -47,14 +48,14 @@ class Choix
         print("\nVeuillez rentrer votre compte github : ")
         scar = "\n[+] ".red
         print(scar)
-        compte = gets.chomp
+        self.compte = gets.chomp
         clear()
     end
     
-    def lancement(ok)
+    def lancement()
         puts Sign.asciitexto
-        (1..ok).each do |i|  
-            req = Net::HTTP.get(URI("https://camo.githubusercontent.com/#{compte}"))
+        (1..self.ok).each do |i|  
+            req = Net::HTTP.get(URI("https://camo.githubusercontent.com/#{self.compte}"))
             print "#{i} views added\r"
         end
     end
@@ -67,5 +68,4 @@ Cchoix = Choix.new()
 puts Sign.touttext
 Cchoix.starting()
 Cchoix.account()
-Cchoix.lancement(ok)
-print ok
+Cchoix.lancement()
