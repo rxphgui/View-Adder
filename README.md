@@ -1,4 +1,4 @@
-[![GitHub All Releases](https://img.shields.io/github/search/Rxphgui/View-Adder/Download)](https://github.com/RxphGui/View-Adder)
+
 # View Adder 👨‍💻 
 
 *I created View-Adder to increase Github account view. When i do my profil and i add the view counter.
